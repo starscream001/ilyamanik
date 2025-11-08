@@ -257,6 +257,35 @@
       border-color: rgba(249, 115, 22, 0.55);
     }
 
+    .rsvp-form {
+      display: grid;
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .rsvp-form label {
+      display: grid;
+      gap: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .rsvp-form input[type="text"] {
+      padding: 14px 16px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--card-border);
+      background: rgba(15, 23, 42, 0.6);
+      color: var(--text);
+      font-size: 1rem;
+      transition: border-color 0.2s ease;
+    }
+
+    .rsvp-form input[type="text"]:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.2);
+    }
+
     .cta button:disabled {
       cursor: not-allowed;
       opacity: 0.6;
@@ -315,11 +344,24 @@
         </ul>
       </div>
       <p>
-        Буду рад, если дашь знать заранее — просто нажми одну из кнопок ниже. Мне прилетит уведомление в Telegram, и я буду знать, что всё готово к нашей встрече.
+        Буду рад, если дашь знать заранее — укажи свои имя и фамилию и нажми одну из кнопок ниже. Мне прилетит уведомление в Telegram, и я буду знать, что всё готово к нашей встрече.
       </p>
-      <div class="cta" role="group" aria-label="Ответ на приглашение">
-        <button type="button" data-rsvp="yes">Я приду!</button>
-        <button type="button" class="secondary" data-rsvp="no">На этот раз не смогу</button>
+      <div class="rsvp-form">
+        <label for="guest-name">
+          Имя и фамилия
+          <input
+            type="text"
+            id="guest-name"
+            name="guest-name"
+            placeholder="Например: Анна Смирнова"
+            autocomplete="name"
+            required
+          />
+        </label>
+        <div class="cta" role="group" aria-label="Ответ на приглашение">
+          <button type="button" data-rsvp="yes">Я приду!</button>
+          <button type="button" class="secondary" data-rsvp="no">На этот раз не смогу</button>
+        </div>
       </div>
       <div class="rsvp-status" role="status" aria-live="polite"></div>
     </div>
@@ -420,6 +462,7 @@
 
       const buttons = document.querySelectorAll('[data-rsvp]');
       const status = document.querySelector('.rsvp-status');
+      const nameInput = document.getElementById('guest-name');
 
       if (!buttons.length || !config.botToken || !config.chatId) {
         if (status) {
@@ -428,8 +471,9 @@
         return;
       }
 
-      const sendRSVP = async (response) => {
-        const text = `RSVP: ${response === 'yes' ? 'приду' : 'не приду'} — ${new Date().toLocaleString('ru-RU')}`;
+      const sendRSVP = async (response, guestName) => {
+        const safeName = guestName.trim();
+        const text = `RSVP: ${response === 'yes' ? 'приду' : 'не приду'}\nГость: ${safeName}\nВремя: ${new Date().toLocaleString('ru-RU')}`;
         const url = `https://api.telegram.org/bot${config.botToken}/sendMessage`;
         const payload = {
           chat_id: config.chatId,
@@ -460,6 +504,16 @@
         button.addEventListener('click', async () => {
           const responseValue = button.dataset.rsvp;
 
+          if (!nameInput || !nameInput.value.trim()) {
+            if (status) {
+              status.textContent = 'Пожалуйста, введи имя и фамилию, прежде чем отправлять ответ.';
+            }
+            if (nameInput) {
+              nameInput.focus();
+            }
+            return;
+          }
+
           buttons.forEach((btn) => {
             btn.disabled = true;
           });
@@ -469,11 +523,11 @@
           }
 
           try {
-            await sendRSVP(responseValue);
+            await sendRSVP(responseValue, nameInput.value);
             if (status) {
               status.textContent = responseValue === 'yes'
-                ? 'Ура! Записал, что ты придёшь — скоро свяжусь с подробностями.'
-                : 'Записал, что у тебя не получится. Если планы изменятся — напиши мне!';
+                ? `Ура! Записал, что ${nameInput.value.trim()} придёт — скоро свяжусь с подробностями.`
+                : `Записал, что ${nameInput.value.trim()} не получится прийти. Если планы изменятся — напиши мне!`;
             }
           } catch (error) {
             if (status) {
