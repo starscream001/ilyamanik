@@ -4,6 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Юбилейный вишлист — 12 ноября 2025</title>
+  <meta name="description" content="Приглашаю отметить 35-летие 12 ноября 2025 года — присоединяйся к празднику и посмотри идеи подарков." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Приглашение на 35-й день рождения — 12 ноября 2025" />
+  <meta property="og:description" content="Давай отметим 35-летие вместе! Смотри детали встречи, вишлист и отметься — придёшь или нет." />
+  <meta property="og:image" content="https://example.com/assets/images/invite-cover.jpg" />
+  <meta property="og:url" content="https://example.com" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Приглашение на 35-й день рождения" />
+  <meta name="twitter:description" content="Буду рад видеть тебя 12 ноября — отмечаем в уютном лофте, подробности внутри." />
+  <meta name="twitter:image" content="https://example.com/assets/images/invite-cover.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet" />
@@ -88,6 +98,35 @@
       margin: 0 0 24px;
       color: var(--text-muted);
       font-size: 1.05rem;
+    }
+
+    .event-details {
+      margin: 32px 0;
+      padding: 24px;
+      border-radius: var(--radius-lg);
+      background: var(--bg-alt);
+      border: 1px solid var(--card-border);
+      display: grid;
+      gap: 12px;
+    }
+
+    .event-details h2 {
+      margin: 0;
+      font-size: 1.25rem;
+    }
+
+    .event-details ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 10px;
+      color: var(--text-muted);
+    }
+
+    .event-details strong {
+      color: var(--text);
+      font-weight: 600;
     }
 
     .hero-badge {
@@ -185,7 +224,8 @@
       gap: 12px;
     }
 
-    .cta a {
+    .cta a,
+    .cta button {
       flex: 1 1 140px;
       display: inline-flex;
       justify-content: center;
@@ -198,6 +238,7 @@
       font-weight: 600;
       text-decoration: none;
       transition: background 0.3s ease, border-color 0.3s ease;
+      cursor: pointer;
     }
 
     .cta a.secondary {
@@ -205,9 +246,26 @@
       border-color: rgba(148, 163, 184, 0.4);
     }
 
-    .cta a:hover {
+    .cta button.secondary {
+      background: transparent;
+      border-color: rgba(148, 163, 184, 0.4);
+    }
+
+    .cta a:hover,
+    .cta button:hover {
       background: rgba(249, 115, 22, 0.28);
       border-color: rgba(249, 115, 22, 0.55);
+    }
+
+    .cta button:disabled {
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+
+    .rsvp-status {
+      margin-top: 18px;
+      font-size: 0.95rem;
+      color: var(--text-muted);
     }
 
     footer {
@@ -244,14 +302,29 @@
   <section class="hero">
     <div class="hero-copy">
       <div class="hero-badge">35-й день рождения · 12.11.2025</div>
-      <h1>Юбилейный вишлист</h1>
+      <h1>Юбилейный вишлист &amp; приглашение</h1>
       <p>
-        В этом году мне исполняется 35 — хочу отметить круглый юбилей яркими впечатлениями и полезными подарками.
-        Ниже собрал всё, что вдохновляет прямо сейчас. Клик по кнопке откроет страницу товара или сбор средств — ссылки можно будет подставить позже.
+        В этом году мне исполняется 35, и я очень хочу разделить этот вечер с тобой. Приходи праздновать, делиться тёплыми историями и, если захочешь, выбрать подарок из списка ниже.
       </p>
+      <div class="event-details" aria-labelledby="event-title">
+        <h2 id="event-title">Встречаемся 12 ноября 2025</h2>
+        <ul>
+          <li><strong>Время:</strong> сбор гостей с 18:30, начинаем в 19:00</li>
+          <li><strong>Локация:</strong> уютный лофт «Северный свет», Санкт-Петербург, ул. Графтио, 3</li>
+          <li><strong>Дресс-код:</strong> smart casual с оттенком осенних огней</li>
+        </ul>
+      </div>
+      <p>
+        Буду рад, если дашь знать заранее — просто нажми одну из кнопок ниже. Мне прилетит уведомление в Telegram, и я буду знать, что всё готово к нашей встрече.
+      </p>
+      <div class="cta" role="group" aria-label="Ответ на приглашение">
+        <button type="button" data-rsvp="yes">Я приду!</button>
+        <button type="button" class="secondary" data-rsvp="no">На этот раз не смогу</button>
+      </div>
+      <div class="rsvp-status" role="status" aria-live="polite"></div>
     </div>
     <div class="hero-image" aria-hidden="true">
-      <img src="https://images.unsplash.com/photo-1521198022873-af0f772bf653?auto=format&fit=crop&w=900&q=80" alt="Свечи на праздничном торте" style="width:100%;max-width:420px;border-radius:var(--radius-lg);box-shadow:var(--shadow);border:1px solid var(--card-border);" />
+      <img src="assets/images/hero-invite.jpg" alt="Свечи на праздничном торте" style="width:100%;max-width:420px;border-radius:var(--radius-lg);box-shadow:var(--shadow);border:1px solid var(--card-border);" />
     </div>
   </section>
 
@@ -324,5 +397,97 @@
   <footer>
     Спасибо, что делаете мой 35-й день рождения особенным. Любой подарок — повод встретиться и отпраздновать вместе!
   </footer>
+
+  <script type="application/json" id="telegram-config">
+    {
+      "botToken": "{{TELEGRAM_BOT_TOKEN}}",
+      "chatId": "{{TELEGRAM_CHAT_ID}}",
+      "threadId": "{{TELEGRAM_THREAD_ID | optional}}"
+    }
+  </script>
+  <script>
+    (function () {
+      const configElement = document.getElementById('telegram-config');
+      let config = {};
+
+      if (configElement) {
+        try {
+          config = JSON.parse(configElement.textContent);
+        } catch (error) {
+          console.warn('Не удалось распарсить конфигурацию Telegram:', error);
+        }
+      }
+
+      const buttons = document.querySelectorAll('[data-rsvp]');
+      const status = document.querySelector('.rsvp-status');
+
+      if (!buttons.length || !config.botToken || !config.chatId) {
+        if (status) {
+          status.textContent = 'Чтобы кнопки заработали, добавь токен и chat_id бота в GitHub Secrets и подставь их при сборке.';
+        }
+        return;
+      }
+
+      const sendRSVP = async (response) => {
+        const text = `RSVP: ${response === 'yes' ? 'приду' : 'не приду'} — ${new Date().toLocaleString('ru-RU')}`;
+        const url = `https://api.telegram.org/bot${config.botToken}/sendMessage`;
+        const payload = {
+          chat_id: config.chatId,
+          text,
+        };
+
+        if (config.threadId && config.threadId !== '{{TELEGRAM_THREAD_ID | optional}}') {
+          payload.message_thread_id = config.threadId;
+        }
+
+        const request = fetch(url, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(payload),
+        });
+
+        return request.then((response) => {
+          if (!response.ok) {
+            throw new Error('Ошибка сети');
+          }
+          return response.json();
+        });
+      };
+
+      buttons.forEach((button) => {
+        button.addEventListener('click', async () => {
+          const responseValue = button.dataset.rsvp;
+
+          buttons.forEach((btn) => {
+            btn.disabled = true;
+          });
+
+          if (status) {
+            status.textContent = 'Отправляю ответ…';
+          }
+
+          try {
+            await sendRSVP(responseValue);
+            if (status) {
+              status.textContent = responseValue === 'yes'
+                ? 'Ура! Записал, что ты придёшь — скоро свяжусь с подробностями.'
+                : 'Записал, что у тебя не получится. Если планы изменятся — напиши мне!';
+            }
+          } catch (error) {
+            if (status) {
+              status.textContent = 'Не получилось отправить ответ. Попробуй ещё раз или напиши мне напрямую.';
+            }
+            console.error(error);
+          } finally {
+            buttons.forEach((btn) => {
+              btn.disabled = false;
+            });
+          }
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
