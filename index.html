@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Праздничное приглашение — день рождения 15 ноября</title>
-  <meta name="description" content="Присоединяйся к празднованию моего дня рождения 15 ноября в 18:30. Запиши дату, отметься и загляни в раздел подарков." />
+  <title>Приглашение на юбилей 12 ноября — 35 лет</title>
+  <meta name="description" content="12 ноября мне исполняется 35 лет, и я очень хочу, чтобы ты отметил этот вечер вместе со мной. Загляни внутрь: детали встречи и как записаться." />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Иду на день рождения 15 ноября?" />
-  <meta property="og:description" content="Празднуем в субботу 15 ноября в 18:30. Загляни внутрь: детали встречи и вдохновение для подарка." />
+  <meta property="og:title" content="Приглашение на юбилей 35 лет — 12 ноября" />
+  <meta property="og:description" content="Встречаемся 12 ноября в 18:30. Рассказываю, где собраться и как записаться, чтобы праздник сложился идеально." />
   <meta property="og:image" content="https://example.com/assets/images/birthday-invite-cover.jpg" />
   <meta property="og:url" content="https://example.com" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Праздничное приглашение — 15 ноября" />
-  <meta name="twitter:description" content="Суббота, 15 ноября в 18:30. Место уточняется, но праздник точно будет!" />
+  <meta name="twitter:title" content="Юбилей 35 лет — приглашаю тебя 12 ноября" />
+  <meta name="twitter:description" content="Суббота, 12 ноября, 18:30. Вся информация о празднике и ссылка для быстрой записи." />
   <meta name="twitter:image" content="https://example.com/assets/images/birthday-invite-cover.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -100,9 +100,14 @@
       font-weight: 700;
       font-size: clamp(1.4rem, 1rem + 1vw, 2.1rem);
       letter-spacing: 0.08em;
-      text-transform: uppercase;
       color: var(--accent);
       text-shadow: 0 0 16px rgba(255, 120, 185, 0.65);
+    }
+
+    .header-note {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: clamp(0.95rem, 0.8rem + 0.4vw, 1.05rem);
     }
 
     .hero {
@@ -411,12 +416,18 @@
 
     @media (max-width: 900px) {
       header {
+        flex-direction: column;
         justify-content: center;
         text-align: center;
+        gap: 12px;
       }
 
       .hero {
         padding: 16px 20px 56px;
+      }
+
+      .header-note {
+        max-width: 420px;
       }
     }
 
@@ -427,11 +438,16 @@
 
       .hero-copy {
         text-align: center;
+        gap: 18px;
       }
 
       .event-details li {
         grid-template-columns: 1fr;
         text-align: left;
+      }
+
+      .gift-grid {
+        grid-template-columns: 1fr;
       }
 
       .cta {
@@ -451,38 +467,62 @@
         width: 100%;
         justify-content: center;
       }
+
+      .event-details {
+        padding: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        line-height: 1.55;
+      }
+
+      header {
+        margin: 12px 16px 0;
+        padding: 20px 16px 6px;
+      }
+
+      .hero {
+        padding: 12px 16px 48px;
+      }
+
+      .gift-grid {
+        padding: 0 16px;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="logo">Let's Party!</div>
-    <div class="tag">15 ноября · 18:30</div>
+    <div class="logo">У меня 12 ноября юбилей — 35 лет</div>
+    <p class="header-note">И я очень хочу пригласить тебя отметить этот вечер со мной.</p>
+    <div class="tag">12 ноября · 18:30</div>
   </header>
 
   <section class="hero">
     <div class="hero-copy">
-      <h1>Приглашаю тебя на свой день рождения!</h1>
+      <h1>Буду рад разделить с тобой юбилейный вечер</h1>
       <p>
-        Вечеринка запланирована на субботу, <strong>15 ноября в 18:30</strong>. Мы готовим много света, любимую музыку
-        и традиционное торт-шоу. Главное — приходи с настроением праздновать.
+        12 ноября праздную свои <strong>35 лет</strong>. План простой: тёплые люди, немного ностальгии, песни, которые мы
+        любим, и торт, который обязательно подожжём свечами. Хочу, чтобы ты был(а) рядом в этот момент.
       </p>
       <div class="event-details">
         <h2>Что важно знать</h2>
         <ul>
-          <li><span>Дата и время</span><div>Суббота, 15 ноября, сбор гостей в 18:30 (начинаем вовремя).</div></li>
-          <li><span>Локация</span><div>Место проведения уточняется — пришлю адрес отдельным сообщением, как только утвердим площадку.</div></li>
-          <li><span>Программа</span><div>Сюрприз от друзей, бар с авторскими напитками и танцы до тех пор, пока не увидим рассвет.</div></li>
+          <li><span>Дата и время</span><div>Суббота, 12 ноября, собираемся к 18:30 (начнём вовремя, как любим).</div></li>
+          <li><span>Локация</span><div>Точную площадку подтверждаю в личном сообщении сразу, как финализирую бронь.</div></li>
+          <li><span>Программа</span><div>Задушевные тосты, пара сюрпризов от друзей и танцы до тех пор, пока ноги не скажут «хватит».</div></li>
         </ul>
       </div>
     </div>
 
     <aside class="card" aria-labelledby="rsvp-title">
       <span class="tag" id="rsvp-title">Отметься, пожалуйста</span>
-      <h2>RSVP за минуту</h2>
+      <h2>Запишись, пожалуйста</h2>
       <p>
-        Напиши, сможешь ли присоединиться, чтобы я успел подготовить угощения на всех. Имя нужно только для того, чтобы
-        понять, кто именно ответил — ничего никуда не сохраняю.
+        Дай знать, получится ли быть. Хочу успеть подготовить места за столом и угощения для всех. Имя нужно только затем,
+        чтобы понять, кто ответил — никаких баз данных или рассылок.
       </p>
       <div class="cta">
         <input type="text" id="guest-name" name="guest-name" placeholder="Имя и фамилия" autocomplete="name" />
@@ -510,30 +550,23 @@
     </article>
 
     <article class="gift-card">
-      <h3>Ещё идеи</h3>
-      <p><strong>Общее путешествие.</strong> Скинуться на будущий уикенд: чем больше нас в лодке, тем веселее маршрут.</p>
-      <p><strong>Впечатления.</strong> Билеты на концерт, мастер-класс, дегустацию — всё, что добавит эмоций в копилку.</p>
-      <p><strong>Видеопожелание.</strong> Сними короткий ролик с пожеланием — я соберу общий ролик, чтобы пересматривать в дождливые вечера.</p>
-    </article>
-
-    <article class="gift-card">
       <h3>Не забудь написать</h3>
       <p>
         Если появятся вопросы или идеи, просто напиши мне в Telegram. Контакты можно указать там же, где будут данные
-        для бота — я подгляну и отвечу.
+        для бота — подгляну, отвечу и всё уточню.
       </p>
     </article>
   </section>
 
   <footer>
-    С нетерпением жду встречи и тостов. До скорой субботы!
+    Спасибо, что заглянул(а) на страницу приглашения. До встречи 12 ноября!
   </footer>
 
-  <!-- Впиши реальные данные Telegram-бота ниже: замените значения в фигурных скобках -->
+  <!-- Данные Telegram-бота: при необходимости замени значения на актуальные -->
   <script type="application/json" id="telegram-config">
     {
-      "botToken": "{{TELEGRAM_BOT_TOKEN}}",
-      "chatId": "{{TELEGRAM_CHAT_ID}}",
+      "botToken": "8376186963:AAH58UvfHhEqiGNsuVa-BZWmZiMLpns5alU",
+      "chatId": "642040616",
       "threadId": "{{TELEGRAM_THREAD_ID | optional}}"
     }
   </script>
