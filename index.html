@@ -3,26 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Юбилейный вишлист — 12 ноября 2025</title>
-  <meta name="description" content="Приглашаю отметить 35-летие 12 ноября 2025 года — присоединяйся к празднику и посмотри идеи подарков." />
+  <title>Праздничное приглашение — день рождения 15 ноября</title>
+  <meta name="description" content="Присоединяйся к празднованию моего дня рождения 15 ноября в 18:30. Запиши дату, отметься и загляни в раздел подарков." />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Приглашение на 35-й день рождения — 12 ноября 2025" />
-  <meta property="og:description" content="Давай отметим 35-летие вместе! Смотри детали встречи, вишлист и отметься — придёшь или нет." />
-  <meta property="og:image" content="https://example.com/assets/images/invite-cover.jpg" />
+  <meta property="og:title" content="Иду на день рождения 15 ноября?" />
+  <meta property="og:description" content="Празднуем в субботу 15 ноября в 18:30. Загляни внутрь: детали встречи и вдохновение для подарка." />
+  <meta property="og:image" content="https://example.com/assets/images/birthday-invite-cover.jpg" />
   <meta property="og:url" content="https://example.com" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Приглашение на 35-й день рождения" />
-  <meta name="twitter:description" content="Буду рад видеть тебя 12 ноября — отмечаем в уютном лофте, подробности внутри." />
-  <meta name="twitter:image" content="https://example.com/assets/images/invite-cover.jpg" />
+  <meta name="twitter:title" content="Праздничное приглашение — 15 ноября" />
+  <meta name="twitter:description" content="Суббота, 15 ноября в 18:30. Место уточняется, но праздник точно будет!" />
+  <meta name="twitter:image" content="https://example.com/assets/images/birthday-invite-cover.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
     :root {
       --bg: #0f172a;
-      --bg-alt: rgba(148, 163, 184, 0.05);
+      --bg-alt: rgba(148, 163, 184, 0.08);
       --accent: #f97316;
       --accent-soft: rgba(249, 115, 22, 0.12);
+      --accent-strong: #fb923c;
       --text: #e2e8f0;
       --text-muted: #94a3b8;
       --card-border: rgba(148, 163, 184, 0.25);
@@ -39,11 +40,13 @@
       margin: 0;
       font-family: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       background: radial-gradient(circle at top left, rgba(30, 64, 175, 0.35), transparent 55%),
-                  radial-gradient(circle at bottom right, rgba(249, 115, 22, 0.2), transparent 50%),
+                  radial-gradient(circle at bottom right, rgba(249, 115, 22, 0.25), transparent 45%),
                   var(--bg);
       color: var(--text);
       min-height: 100vh;
       line-height: 1.6;
+      display: flex;
+      flex-direction: column;
     }
 
     a {
@@ -51,9 +54,9 @@
     }
 
     header {
-      max-width: 1100px;
+      max-width: 1080px;
       margin: 0 auto;
-      padding: 32px 24px 12px;
+      padding: 32px 24px 16px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -63,34 +66,25 @@
 
     .logo {
       font-weight: 700;
-      font-size: clamp(1.4rem, 1.1rem + 1vw, 1.9rem);
+      font-size: clamp(1.4rem, 1rem + 1vw, 2rem);
       letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--accent);
     }
 
-    .countdown {
-      background: var(--accent-soft);
-      color: var(--accent);
-      padding: 10px 16px;
-      border-radius: 999px;
-      font-weight: 600;
-      font-size: 0.9rem;
-    }
-
     .hero {
-      max-width: 1100px;
+      max-width: 1080px;
       margin: 0 auto;
-      padding: 20px 24px 60px;
+      padding: 20px 24px 54px;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      align-items: center;
+      align-items: start;
       gap: 40px;
     }
 
     .hero-copy h1 {
       margin: 0 0 16px;
-      font-size: clamp(2.2rem, 1.2rem + 2.8vw, 3.4rem);
+      font-size: clamp(2.4rem, 1.4rem + 2.6vw, 3.6rem);
       font-weight: 700;
     }
 
@@ -101,7 +95,7 @@
     }
 
     .event-details {
-      margin: 32px 0;
+      margin: 28px 0;
       padding: 24px;
       border-radius: var(--radius-lg);
       background: var(--bg-alt);
@@ -113,6 +107,7 @@
     .event-details h2 {
       margin: 0;
       font-size: 1.25rem;
+      color: var(--accent-strong);
     }
 
     .event-details ul {
@@ -121,75 +116,34 @@
       padding: 0;
       display: grid;
       gap: 10px;
-      color: var(--text-muted);
     }
 
-    .event-details strong {
-      color: var(--text);
-      font-weight: 600;
-    }
-
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      padding: 14px 22px;
-      border-radius: var(--radius-md);
-      background: var(--bg-alt);
-      backdrop-filter: blur(12px);
-      border: 1px solid var(--card-border);
-      color: var(--text);
-      font-weight: 600;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-    }
-
-    .grid {
-      max-width: 1100px;
-      margin: 0 auto 90px;
-      padding: 0 24px;
+    .event-details li {
       display: grid;
-      gap: 26px;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: 120px 1fr;
+      gap: 12px;
+      align-items: start;
+      font-size: 0.98rem;
+    }
+
+    .event-details span {
+      color: var(--text-muted);
+      font-weight: 600;
     }
 
     .card {
-      position: relative;
+      padding: 32px;
       border-radius: var(--radius-lg);
-      padding: 28px;
-      background: linear-gradient(145deg, rgba(15, 23, 42, 0.9), rgba(30, 41, 59, 0.65));
+      background: rgba(15, 23, 42, 0.75);
       border: 1px solid var(--card-border);
       box-shadow: var(--shadow);
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-      isolation: isolate;
-    }
-
-    .card::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-radius: inherit;
-      background: linear-gradient(135deg, rgba(249, 115, 22, 0.08), transparent 60%);
-      z-index: -1;
-      opacity: 0;
-      transition: opacity 0.4s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 35px 60px -18px rgba(15, 23, 42, 0.7);
-    }
-
-    .card:hover::after {
-      opacity: 1;
+      display: grid;
+      gap: 20px;
     }
 
     .card h2 {
       margin: 0;
-      font-size: 1.4rem;
+      font-size: 1.5rem;
     }
 
     .card p {
@@ -197,249 +151,187 @@
       color: var(--text-muted);
     }
 
-    .card small {
-      color: var(--text-muted);
-      opacity: 0.8;
-    }
-
     .tag {
       display: inline-flex;
-      align-self: flex-start;
       align-items: center;
       gap: 8px;
-      padding: 6px 12px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      padding: 6px 14px;
       border-radius: 999px;
-      background: rgba(148, 163, 184, 0.12);
-      color: var(--text-muted);
-      text-transform: uppercase;
-      font-size: 0.72rem;
-      letter-spacing: 0.08em;
+      font-size: 0.85rem;
       font-weight: 600;
     }
 
     .cta {
-      margin-top: auto;
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
     }
 
-    .cta a,
     .cta button {
-      flex: 1 1 140px;
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      padding: 12px 16px;
-      border-radius: 14px;
-      border: 1px solid rgba(249, 115, 22, 0.35);
-      background: rgba(249, 115, 22, 0.18);
-      color: var(--text);
-      font-weight: 600;
-      text-decoration: none;
-      transition: background 0.3s ease, border-color 0.3s ease;
-      cursor: pointer;
-    }
-
-    .cta a.secondary {
-      background: transparent;
-      border-color: rgba(148, 163, 184, 0.4);
-    }
-
-    .cta button.secondary {
-      background: transparent;
-      border-color: rgba(148, 163, 184, 0.4);
-    }
-
-    .cta a:hover,
-    .cta button:hover {
-      background: rgba(249, 115, 22, 0.28);
-      border-color: rgba(249, 115, 22, 0.55);
-    }
-
-    .rsvp-form {
-      display: grid;
-      gap: 14px;
-      margin-top: 24px;
-    }
-
-    .rsvp-form label {
-      display: grid;
-      gap: 8px;
+      background: var(--accent);
+      color: #0f172a;
+      border: none;
+      border-radius: 999px;
+      padding: 12px 24px;
       font-weight: 600;
       font-size: 0.95rem;
+      cursor: pointer;
+      transition: transform 0.2s ease, background 0.2s ease;
     }
 
-    .rsvp-form input[type="text"] {
-      padding: 14px 16px;
-      border-radius: var(--radius-md);
-      border: 1px solid var(--card-border);
+    .cta button:hover,
+    .cta button:focus-visible {
+      transform: translateY(-2px);
+      background: var(--accent-strong);
+    }
+
+    .cta input {
+      flex: 1 1 240px;
+      min-width: 200px;
       background: rgba(15, 23, 42, 0.6);
       color: var(--text);
-      font-size: 1rem;
-      transition: border-color 0.2s ease;
-    }
-
-    .rsvp-form input[type="text"]:focus {
-      outline: none;
-      border-color: var(--accent);
-      box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.2);
-    }
-
-    .cta button:disabled {
-      cursor: not-allowed;
-      opacity: 0.6;
+      border: 1px solid var(--card-border);
+      border-radius: 999px;
+      padding: 12px 18px;
+      font-size: 0.95rem;
     }
 
     .rsvp-status {
-      margin-top: 18px;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
+      color: var(--accent-strong);
+    }
+
+    .gift-grid {
+      max-width: 1080px;
+      margin: 0 auto 72px;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+    }
+
+    .gift-card {
+      background: var(--bg-alt);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .gift-card h3 {
+      margin: 0;
+      font-size: 1.2rem;
+      color: var(--accent-strong);
+    }
+
+    .gift-card p {
+      margin: 0;
       color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .gift-card strong {
+      color: var(--text);
     }
 
     footer {
-      max-width: 1100px;
-      margin: 40px auto 32px;
-      padding: 0 24px;
-      color: var(--text-muted);
+      margin-top: auto;
+      padding: 40px 24px 32px;
       text-align: center;
+      color: var(--text-muted);
       font-size: 0.9rem;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 520px) {
+      .event-details li {
+        grid-template-columns: 1fr;
+      }
+
       header {
         justify-content: center;
-        text-align: center;
-      }
-
-      .hero {
-        text-align: center;
-      }
-
-      .cta {
-        flex-direction: column;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="logo">Wishlist 35</div>
-    <div class="countdown">До праздника: 12 ноября 2025</div>
+    <div class="logo">Let's Party!</div>
+    <div class="tag">15 ноября · 18:30</div>
   </header>
 
   <section class="hero">
     <div class="hero-copy">
-      <div class="hero-badge">35-й день рождения · 12.11.2025</div>
-      <h1>Юбилейный вишлист &amp; приглашение</h1>
+      <h1>Приглашаю тебя на свой день рождения!</h1>
       <p>
-        В этом году мне исполняется 35, и я очень хочу разделить этот вечер с тобой. Приходи праздновать, делиться тёплыми историями и, если захочешь, выбрать подарок из списка ниже.
+        Вечеринка запланирована на субботу, <strong>15 ноября в 18:30</strong>. Мы готовим много света, любимую музыку
+        и традиционное торт-шоу. Главное — приходи с настроением праздновать.
       </p>
-      <div class="event-details" aria-labelledby="event-title">
-        <h2 id="event-title">Встречаемся 12 ноября 2025</h2>
+      <div class="event-details">
+        <h2>Что важно знать</h2>
         <ul>
-          <li><strong>Время:</strong> сбор гостей с 18:30, начинаем в 19:00</li>
-          <li><strong>Локация:</strong> уютный лофт «Северный свет», Санкт-Петербург, ул. Графтио, 3</li>
-          <li><strong>Дресс-код:</strong> smart casual с оттенком осенних огней</li>
+          <li><span>Дата и время</span><div>Суббота, 15 ноября, сбор гостей в 18:30 (начинаем вовремя).</div></li>
+          <li><span>Локация</span><div>Место проведения уточняется — пришлю адрес отдельным сообщением, как только утвердим площадку.</div></li>
+          <li><span>Дресс-код</span><div>Festive glow: всё, что блестит, сияет или просто радует тебя.</div></li>
         </ul>
       </div>
+    </div>
+
+    <aside class="card" aria-labelledby="rsvp-title">
+      <span class="tag" id="rsvp-title">Отметься, пожалуйста</span>
+      <h2>RSVP за минуту</h2>
       <p>
-        Буду рад, если дашь знать заранее — укажи свои имя и фамилию и нажми одну из кнопок ниже. Мне прилетит уведомление в Telegram, и я буду знать, что всё готово к нашей встрече.
+        Напиши, сможешь ли присоединиться, чтобы я успел подготовить угощения на всех. Имя нужно только для того, чтобы
+        понять, кто именно ответил — ничего никуда не сохраняю.
       </p>
-      <div class="rsvp-form">
-        <label for="guest-name">
-          Имя и фамилия
-          <input
-            type="text"
-            id="guest-name"
-            name="guest-name"
-            placeholder="Например: Анна Смирнова"
-            autocomplete="name"
-            required
-          />
-        </label>
-        <div class="cta" role="group" aria-label="Ответ на приглашение">
-          <button type="button" data-rsvp="yes">Я приду!</button>
-          <button type="button" class="secondary" data-rsvp="no">На этот раз не смогу</button>
-        </div>
+      <div class="cta">
+        <input type="text" id="guest-name" name="guest-name" placeholder="Имя и фамилия" autocomplete="name" />
+        <button data-rsvp="yes">Буду</button>
+        <button data-rsvp="no" style="background: transparent; color: var(--text); border: 1px solid var(--card-border);">Не смогу</button>
       </div>
-      <div class="rsvp-status" role="status" aria-live="polite"></div>
-    </div>
-    <div class="hero-image" aria-hidden="true">
-      <img src="assets/images/hero-invite.jpg" alt="Свечи на праздничном торте" style="width:100%;max-width:420px;border-radius:var(--radius-lg);box-shadow:var(--shadow);border:1px solid var(--card-border);" />
-    </div>
+      <div class="rsvp-status" aria-live="polite"></div>
+      <p style="font-size: 0.85rem; color: var(--text-muted);">
+        Чтобы кнопки заработали, подставь данные Telegram-бота внизу файла (см. блок <code>&lt;script type="application/json" id="telegram-config"&gt;</code>).
+      </p>
+    </aside>
   </section>
 
-  <section class="grid" aria-label="Список желанных подарков">
-    <article class="card">
-      <span class="tag">Тренировки</span>
-      <h2>Деревянный манекен Вин Чун</h2>
-      <p>Поможет отточить технику и двигаться дальше в практике. Ищу качественную модель из массива дерева.</p>
-      <div class="cta">
-        <a href="#" aria-label="Ссылка на деревянный манекен">Добавить ссылку на магазин</a>
-      </div>
+  <section class="gift-grid" aria-labelledby="gift-title">
+    <article class="gift-card">
+      <h3 id="gift-title">Подарки? Сделаем остроумно</h3>
+      <p>
+        Есть китайская поговорка: <strong>«Красный конверт греет сердце сильнее любого чайника»</strong>. Если хочется
+        поучаствовать в моём следующем приключении — буду рад любому вкладу в конверте (или переводе).
+      </p>
+      <p>
+        Формат свободный: можешь принести конверт, поделиться переводом или подарить сертификат в любимый сервис.
+        Главное — твоя забота и присутствие.
+      </p>
     </article>
 
-    <article class="card">
-      <span class="tag">Авто</span>
-      <h2>Мультируль для VW Polo 5 (рестайлинг, 2017)</h2>
-      <p>Хочу обновить интерьер авто и получить больше комфорта в дороге. Подойдёт оригинальный комплект.</p>
-      <div class="cta">
-        <a href="#" aria-label="Ссылка на мультируль">Добавить ссылку</a>
-      </div>
+    <article class="gift-card">
+      <h3>Ещё идеи</h3>
+      <p><strong>Общее путешествие.</strong> Скинуться на будущий уикенд: чем больше нас в лодке, тем веселее маршрут.</p>
+      <p><strong>Впечатления.</strong> Билеты на концерт, мастер-класс, дегустацию — всё, что добавит эмоций в копилку.</p>
+      <p><strong>Символический сувенир.</strong> Если хочется что-то материальное — пусть это будет миниатюра, которую легко взять в следующий трип.</p>
     </article>
 
-    <article class="card">
-      <span class="tag">Авто</span>
-      <h2>Штатная магнитола с BT и CarPlay</h2>
-      <p>Мечтаю о полноценной мультимедиа с поддержкой Apple CarPlay и Bluetooth, чтобы всё было «из коробки».</p>
-      <div class="cta">
-        <a href="#" aria-label="Ссылка на магнитолу">Добавить ссылку</a>
-      </div>
-    </article>
-
-    <article class="card">
-      <span class="tag">Профессия</span>
-      <h2>Годовая лицензия WebStorm</h2>
-      <p>У меня уже есть аккаунт JetBrains — нужно просто продлить подписку на ещё один год.</p>
-      <div class="cta">
-        <a href="#" aria-label="Инструкция по лицензии WebStorm">Добавить ссылку на оформление</a>
-        <a class="secondary" href="#" aria-label="Отправить данные для лицензии">Добавить ссылку на перевод средств</a>
-      </div>
-    </article>
-
-    <article class="card">
-      <span class="tag">Поддержка</span>
-      <h2>Вклад деньгами</h2>
-      <p>Если сомневаетесь, что подарить — перевод тоже сделает праздник особенным. Любая сумма в радость!</p>
-      <div class="cta">
-        <a href="#" aria-label="Ссылка на сбор средств">Добавить ссылку на сбор</a>
-      </div>
-    </article>
-
-    <article class="card">
-      <span class="tag">Свободный слот</span>
-      <h2>Идея от тебя</h2>
-      <p>Есть что-то, что идеально подходит? Добавь ссылку — я всегда рад сюрпризам и новым впечатлениям.</p>
-      <div class="cta">
-        <a href="#" aria-label="Добавить свою идею">Добавить ссылку</a>
-      </div>
-    </article>
-
-    <article class="card">
-      <span class="tag">Свободный слот</span>
-      <h2>Твой персональный подарок</h2>
-      <p>Оставляю место для творческого подхода: опыт, впечатление или предмет, который, по твоему мнению, мне нужен.</p>
-      <div class="cta">
-        <a href="#" aria-label="Добавить ссылку">Добавить ссылку</a>
-      </div>
+    <article class="gift-card">
+      <h3>Не забудь написать</h3>
+      <p>
+        Если появятся вопросы или идеи, просто напиши мне в Telegram. Контакты можно указать там же, где будут данные
+        для бота — я подгляну и отвечу.
+      </p>
     </article>
   </section>
 
   <footer>
-    Спасибо, что делаете мой 35-й день рождения особенным. Любой подарок — повод встретиться и отпраздновать вместе!
+    С нетерпением жду встречи и тостов. До скорой субботы!
   </footer>
 
+  <!-- Впиши реальные данные Telegram-бота ниже: замените значения в фигурных скобках -->
   <script type="application/json" id="telegram-config">
     {
       "botToken": "{{TELEGRAM_BOT_TOKEN}}",
@@ -466,7 +358,7 @@
 
       if (!buttons.length || !config.botToken || !config.chatId) {
         if (status) {
-          status.textContent = 'Чтобы кнопки заработали, добавь токен и chat_id бота в GitHub Secrets и подставь их при сборке.';
+          status.textContent = 'Чтобы кнопки заработали, впиши токен и chat_id бота в блок конфигурации ниже.';
         }
         return;
       }
@@ -484,15 +376,13 @@
           payload.message_thread_id = config.threadId;
         }
 
-        const request = fetch(url, {
+        return fetch(url, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify(payload),
-        });
-
-        return request.then((response) => {
+        }).then((response) => {
           if (!response.ok) {
             throw new Error('Ошибка сети');
           }
@@ -526,7 +416,7 @@
             await sendRSVP(responseValue, nameInput.value);
             if (status) {
               status.textContent = responseValue === 'yes'
-                ? `Ура! Записал, что ${nameInput.value.trim()} придёт — скоро свяжусь с подробностями.`
+                ? `Ура! Записал, что ${nameInput.value.trim()} придёт — скоро пришлю место.`
                 : `Записал, что ${nameInput.value.trim()} не получится прийти. Если планы изменятся — напиши мне!`;
             }
           } catch (error) {
