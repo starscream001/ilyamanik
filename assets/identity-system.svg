@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 980" role="img" aria-labelledby="title desc">
+  <title id="title">Темный портфолио-постер Ильи Маника</title>
+  <desc id="desc">Графический постер с портретной зоной, контактами, реквизитами и примерами сайтов под заказ.</desc>
+  <defs>
+    <linearGradient id="portraitFade" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#24231f"/>
+      <stop offset=".58" stop-color="#11110f"/>
+      <stop offset="1" stop-color="#080808"/>
+    </linearGradient>
+    <linearGradient id="greenWash" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7fad30"/>
+      <stop offset="1" stop-color="#9bd35a"/>
+    </linearGradient>
+    <style>
+      .bg{fill:#0a0a0a}.panel{fill:#151514}.panel2{fill:#20201e}.ink{fill:#f1eee8}.muted{fill:#aaa59d}.subtle{fill:#706b62}.line{stroke:#34322e;stroke-width:3}.green{fill:#8fc43a}.greenText{fill:#11130d}.orange{fill:#df6a2e}.blue{fill:#2e85bd}.red{fill:#c83a2f}.mono{font-family:IBM Plex Mono,ui-monospace,monospace}.sans{font-family:Manrope,Arial,sans-serif}.display{font-family:Unbounded,Manrope,Arial,sans-serif;font-weight:700}
+    </style>
+  </defs>
+
+  <rect width="820" height="980" rx="38" class="bg"/>
+  <rect x="34" y="34" width="752" height="912" rx="28" class="panel line"/>
+
+  <g>
+    <rect x="64" y="74" width="318" height="494" rx="16" fill="#0d0d0c" class="line"/>
+    <text x="94" y="153" class="display ink" font-size="52">Илья</text>
+    <text x="94" y="211" class="display ink" font-size="52">Маник</text>
+    <text x="96" y="255" class="sans muted" font-size="20">Контакты, реквизиты</text>
+    <text x="96" y="286" class="sans muted" font-size="20">и сайты под заказ</text>
+    <rect x="96" y="342" width="132" height="42" rx="5" class="green"/>
+    <text x="124" y="370" class="mono greenText" font-size="14">сайты</text>
+    <rect x="244" y="342" width="106" height="42" rx="5" fill="#0d0d0c" stroke="#8fc43a" stroke-width="2"/>
+    <text x="270" y="370" class="mono ink" font-size="14">ИП</text>
+    <path d="M96 444h210M96 480h142M96 516h178" stroke="#34322e" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <g>
+    <rect x="382" y="34" width="404" height="534" rx="0" fill="url(#portraitFade)"/>
+    <path d="M592 130c-72 14-114 72-118 154-3 76 28 139 84 168 38 19 90 22 129 4-44-48-42-97-29-153 12-54-4-131-66-173z" fill="#050505"/>
+    <path d="M558 171c-40 43-41 144-13 200 16 31 43 55 80 58 35 3 70-12 91-39-63 2-106-31-112-90-6-56 10-94-46-129z" fill="#191817"/>
+    <circle cx="622" cy="278" r="84" fill="#0c0c0b"/>
+    <path d="M560 280c56 19 111 18 164-5" stroke="#2d2c2a" stroke-width="4" fill="none"/>
+    <rect x="425" y="494" width="300" height="38" rx="5" class="panel2"/>
+    <text x="448" y="519" class="mono muted" font-size="14">место под реальное фото</text>
+  </g>
+
+  <g>
+    <text x="64" y="646" class="display muted" font-size="26">Примеры сайтов</text>
+    <text x="64" y="679" class="mono subtle" font-size="14">portfolio / service / official</text>
+    <rect x="64" y="712" width="196" height="138" rx="8" class="panel2 line"/>
+    <rect x="88" y="736" width="72" height="92" rx="6" class="bg"/>
+    <path d="M178 750h50M178 776h34M178 804h58" stroke="#706b62" stroke-width="5" stroke-linecap="round"/>
+    <rect x="88" y="812" width="124" height="10" rx="5" class="green"/>
+    <text x="88" y="878" class="mono muted" font-size="13">личный сайт</text>
+
+    <rect x="312" y="712" width="196" height="138" rx="8" class="panel2 line"/>
+    <rect x="336" y="736" width="148" height="56" rx="6" class="bg"/>
+    <rect x="336" y="808" width="92" height="20" rx="4" class="orange"/>
+    <path d="M444 812h30M444 828h22" stroke="#aaa59d" stroke-width="4" stroke-linecap="round"/>
+    <text x="336" y="878" class="mono muted" font-size="13">лендинг услуги</text>
+
+    <rect x="560" y="712" width="196" height="138" rx="8" class="panel2 line"/>
+    <rect x="584" y="736" width="42" height="92" rx="6" class="blue"/>
+    <path d="M646 754h76M646 784h58M646 814h84" stroke="#706b62" stroke-width="5" stroke-linecap="round"/>
+    <rect x="646" y="824" width="84" height="8" rx="4" class="green"/>
+    <text x="584" y="878" class="mono muted" font-size="13">реквизиты</text>
+  </g>
+
+  <g>
+    <rect x="34" y="890" width="752" height="56" fill="url(#greenWash)"/>
+    <text x="64" y="925" class="mono greenText" font-size="17">telegram.me/Ilya_Manik</text>
+    <text x="570" y="925" class="mono greenText" font-size="17">2026</text>
+  </g>
+</svg>
