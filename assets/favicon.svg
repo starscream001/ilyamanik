@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="ИМ">
+  <rect width="64" height="64" rx="10" fill="#10100f"/>
+  <rect x="8" y="8" width="48" height="48" rx="8" fill="#171716" stroke="#8fc43a" stroke-width="3"/>
+  <rect x="14" y="14" width="36" height="8" rx="2" fill="#8fc43a"/>
+  <text x="32" y="43" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#f1eee8">ИМ</text>
+</svg>
