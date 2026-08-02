@@ -3,13 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Дарье Маник 5 лет - 8 августа 2026</title>
-  <meta name="description" content="Приглашение на день рождения Дарьи Маник 8 августа 2026 года в детской конной академии Рутения во Всеволожске.">
+  <title>Дарье Маник 5 лет - приглашение</title>
+  <meta name="description" content="Приглашение на 5-летие Дарьи Маник: 8 августа 2026, 11:30, Рутения во Всеволожске. Веревочный парк, лошади, детский обед и мангальная зона.">
+  <meta name="theme-color" content="#fff6e7">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Дарье Маник 5 лет">
-  <meta property="og:description" content="8 августа 2026, 12:00. Рутения, Всеволожск: веревочный парк, лошади, обед для детей и мангальная зона для взрослых.">
+  <meta property="og:site_name" content="Илья Маник">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="Дарье Маник 5 лет - приглашение">
+  <meta property="og:description" content="8 августа 2026, 11:30, Рутения во Всеволожске. Веревочный парк 40-60 минут, лошади около часа, детский обед и мангальная зона.">
   <meta property="og:url" content="https://ilyamanik.ru/darya.html">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1620997987432-e9331987c6e0?q=80&w=1200&auto=format&fit=crop">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1620997987432-e9331987c6e0?q=80&w=1200&h=630&auto=format&fit=crop">
+  <meta property="og:image:secure_url" content="https://images.unsplash.com/photo-1620997987432-e9331987c6e0?q=80&w=1200&h=630&auto=format&fit=crop">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Приглашение на день рождения Дарьи Маник в Рутении">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Дарье Маник 5 лет - приглашение">
+  <meta name="twitter:description" content="8 августа 2026, 11:30, Рутения во Всеволожске. Веревочный парк 40-60 минут, лошади около часа, детский обед и мангальная зона.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1620997987432-e9331987c6e0?q=80&w=1200&h=630&auto=format&fit=crop">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -244,6 +255,19 @@
       isolation: isolate;
       background: #f9dfac;
       color: var(--ink);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      z-index: 0;
+      height: 28%;
+      background:
+        linear-gradient(90deg, rgba(233, 104, 93, 0.1), transparent 24%),
+        repeating-linear-gradient(90deg, rgba(25, 50, 44, 0.09) 0 1px, transparent 1px 8rem);
+      mask-image: linear-gradient(180deg, transparent, #000 46%);
+      pointer-events: none;
     }
 
     .hero-media {
@@ -482,6 +506,17 @@
       color: #fff8ea;
     }
 
+    .button-route {
+      border-color: rgba(25, 50, 44, 0.22);
+      background: #fffdf8;
+      color: var(--ink);
+    }
+
+    .button-route:hover {
+      border-color: rgba(25, 50, 44, 0.4);
+      background: var(--accent-soft);
+    }
+
     .hero-facts {
       display: grid;
       grid-template-columns: 1fr;
@@ -618,6 +653,31 @@
       font-size: 8rem;
       font-weight: 800;
       line-height: 0.82;
+    }
+
+    .duration-strip {
+      display: grid;
+      gap: 0.55rem;
+      margin-top: 1rem;
+    }
+
+    .duration-strip div {
+      display: grid;
+      grid-template-columns: 4.8rem 1fr;
+      gap: 0.7rem;
+      align-items: baseline;
+      border-top: 1px solid rgba(255, 248, 234, 0.2);
+      padding-top: 0.7rem;
+    }
+
+    .duration-strip strong {
+      color: var(--accent-soft);
+      font-family: var(--font-sans);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .duration-strip span {
+      color: rgba(255, 248, 234, 0.78);
     }
 
     .activity-list {
@@ -768,6 +828,10 @@
       gap: 0.75rem;
     }
 
+    .note-grid-wide {
+      grid-template-columns: 1fr;
+    }
+
     .note {
       position: relative;
       overflow: hidden;
@@ -788,6 +852,95 @@
     .note p {
       margin-top: 0.45rem;
       color: var(--ink-muted);
+    }
+
+    .gift-section {
+      width: 100%;
+      max-width: calc(var(--content) + 2rem);
+      margin-inline: auto;
+      padding: 4rem 1rem;
+    }
+
+    .gift-panel {
+      position: relative;
+      display: grid;
+      gap: 1rem;
+      overflow: hidden;
+      border: 1px solid rgba(25, 50, 44, 0.12);
+      border-radius: 1.2rem;
+      padding: 1.2rem;
+      background:
+        linear-gradient(135deg, rgba(23, 56, 47, 0.94), rgba(35, 95, 79, 0.92)),
+        var(--surface-deep);
+      color: #fff8ea;
+      box-shadow: var(--shadow);
+    }
+
+    .gift-panel::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 16% 20%, rgba(244, 189, 44, 0.22), transparent 16rem),
+        radial-gradient(circle at 84% 10%, rgba(148, 216, 244, 0.2), transparent 15rem);
+      pointer-events: none;
+    }
+
+    .gift-copy,
+    .gift-list {
+      position: relative;
+      z-index: 1;
+    }
+
+    .gift-copy {
+      display: grid;
+      gap: 0.8rem;
+    }
+
+    .gift-copy p {
+      color: rgba(255, 248, 234, 0.78);
+    }
+
+    .gift-list {
+      display: grid;
+      gap: 0.65rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .gift-list li {
+      border: 1px solid rgba(255, 248, 234, 0.18);
+      border-radius: var(--radius);
+      padding: 0.9rem;
+      background: rgba(255, 248, 234, 0.08);
+    }
+
+    .gift-list strong {
+      display: block;
+      font-family: var(--font-sans);
+      line-height: 1.2;
+    }
+
+    .gift-list span {
+      display: block;
+      margin-top: 0.28rem;
+      color: rgba(255, 248, 234, 0.72);
+    }
+
+    .form-note {
+      border: 1px solid rgba(39, 122, 82, 0.22);
+      border-radius: var(--radius);
+      padding: 0.9rem;
+      background: rgba(114, 210, 173, 0.12);
+      color: var(--ink-muted);
+    }
+
+    .form-note strong {
+      display: block;
+      color: var(--ink);
+      font-family: var(--font-sans);
+      line-height: 1.2;
     }
 
     .rsvp-wrap {
@@ -1136,6 +1289,24 @@
         grid-template-columns: repeat(3, minmax(0, 1fr));
       }
 
+      .note-grid-wide {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .note-grid-wide .note:last-child {
+        grid-column: 1 / -1;
+      }
+
+      .gift-panel {
+        grid-template-columns: minmax(18rem, 0.42fr) minmax(0, 1fr);
+        gap: 2rem;
+        padding: 1.5rem;
+      }
+
+      .gift-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
       .rsvp-panel {
         grid-template-columns: minmax(19rem, 0.36fr) minmax(0, 1fr);
         gap: 2rem;
@@ -1204,6 +1375,7 @@
     <div class="nav-links">
       <a href="#program">Программа</a>
       <a href="#parents">Родителям</a>
+      <a href="#gifts">Подарки</a>
       <a href="#rsvp">Ответить</a>
     </div>
   </nav>
@@ -1224,27 +1396,27 @@
         <div class="hero-copy reveal">
           <h1 id="hero-title">Дарье <span class="inline-scene" aria-hidden="true"></span> 5 лет</h1>
           <p>
-            Приглашаем 8 августа 2026 года к 12:00 в Рутению: день на природе с веревочным парком,
-            лошадьми, детским обедом и спокойной мангальной зоной для взрослых.
+            Приглашаем 8 августа 2026 года к 11:30 в Рутению: примерно четыре часа на природе
+            с веревочным парком, лошадьми, детским обедом и спокойной мангальной зоной для взрослых.
           </p>
           <div class="hero-actions" aria-label="Основные действия">
             <a class="button button-primary" href="#rsvp">Ответить на приглашение</a>
-            <a class="button button-secondary" href="https://2gis.ru/vsevolozhsk/firm/70000001022357913" target="_blank" rel="noreferrer">Открыть маршрут</a>
+            <a class="button button-route" href="https://yandex.ru/maps/?mode=routes&rtext=~%D0%92%D1%81%D0%B5%D0%B2%D0%BE%D0%BB%D0%BE%D0%B6%D1%81%D0%BA%2C%20%D0%9F%D1%83%D1%88%D0%BA%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BF%D0%B5%D1%80%D0%B5%D1%83%D0%BB%D0%BE%D0%BA%2C%207&rtt=auto" target="_blank" rel="noreferrer">Построить маршрут</a>
           </div>
         </div>
 
         <div class="hero-facts reveal" aria-label="Краткая информация">
           <div class="fact">
             <span>Когда</span>
-            <strong>Суббота, 8 августа 2026, собираемся к 12:00</strong>
+            <strong>Суббота, 8 августа 2026, собираемся к 11:30</strong>
           </div>
           <div class="fact">
             <span>Где</span>
             <strong>Рутения, Всеволожск, Пушкинский переулок, 7</strong>
           </div>
           <div class="fact">
-            <span>Что взять</span>
-            <strong>Удобную одежду и кроссовки</strong>
+            <span>Длительность</span>
+            <strong>Около 4 часов, с обедом и паузами</strong>
           </div>
         </div>
       </div>
@@ -1268,7 +1440,7 @@
           <ul class="activity-list">
             <li>
               <strong>Веревочный парк</strong>
-              <span>Для детей с 5 лет. Родители сопровождают, присматривают и помогают своим детям прямо на маршруте.</span>
+              <span>Для детей с 5 лет, ориентир 40-60 минут. Родители сопровождают, присматривают и помогают своим детям прямо на маршруте.</span>
             </li>
             <li>
               <strong>Младшие дети</strong>
@@ -1276,9 +1448,23 @@
             </li>
             <li>
               <strong>Лошади</strong>
-              <span>Интерактивная программа по обращению с лошадьми, знакомство, уход и катание.</span>
+              <span>Интерактивная программа по обращению с лошадьми, знакомство, уход и катание, примерно один час.</span>
             </li>
           </ul>
+          <div class="duration-strip" aria-label="Длительность активностей">
+            <div>
+              <strong>40-60</strong>
+              <span>минут в веревочном парке</span>
+            </div>
+            <div>
+              <strong>1 час</strong>
+              <span>на программу с лошадьми</span>
+            </div>
+            <div>
+              <strong>4 часа</strong>
+              <span>весь праздник вместе с обедом и паузами</span>
+            </div>
+          </div>
         </article>
 
         <article class="bento-card span-3-1 reveal">
@@ -1350,36 +1536,36 @@
         <div class="flow-copy">
           <h2 id="schedule-title">Как пройдет день</h2>
           <p data-word-reveal>
-            Собираемся к двенадцати, спокойно распределяемся по активностям, кормим детей в столовой и оставляем место
+            Собираемся к 11:30, спокойно распределяемся по активностям, кормим детей в столовой и оставляем место
             для прогулок, животных, разговоров и горячего шашлыка.
           </p>
         </div>
 
         <div class="schedule" aria-label="План дня">
           <div class="schedule-row">
-            <span class="schedule-time">12:00</span>
+            <span class="schedule-time">11:30</span>
             <strong>Сбор гостей</strong>
             <span>Встречаемся на территории Рутении, Всеволожск, Пушкинский переулок, 7.</span>
           </div>
           <div class="schedule-row">
-            <span class="schedule-time">12:20</span>
+            <span class="schedule-time">11:50</span>
             <strong>Веревочный парк</strong>
-            <span>Дети с 5 лет проходят маршрут в сопровождении родителей. Младшие смотрят и болеют.</span>
+            <span>Ориентир 40-60 минут. Дети с 5 лет проходят маршрут в сопровождении родителей. Младшие смотрят и болеют.</span>
           </div>
           <div class="schedule-row">
-            <span class="schedule-time">После</span>
+            <span class="schedule-time">13:00</span>
             <strong>Обед для детей</strong>
             <span>Куриный суп, макароны с котлетой, пирог от заведения по плану.</span>
           </div>
           <div class="schedule-row">
-            <span class="schedule-time">Далее</span>
+            <span class="schedule-time">13:45</span>
             <strong>Мастер-класс с лошадьми</strong>
-            <span>Интерактивная программа по обращению с лошадьми и катание.</span>
+            <span>Около часа: интерактивная программа по обращению с лошадьми и катание.</span>
           </div>
           <div class="schedule-row">
-            <span class="schedule-time">Весь день</span>
-            <strong>Мангальная зона</strong>
-            <span>Для взрослых: рыба, свинина, разговоры и отдых рядом с детской программой.</span>
+            <span class="schedule-time">До 15:30</span>
+            <strong>Площадки, животные и мангал</strong>
+            <span>Всего ориентируемся примерно на четыре часа праздника с обедом, прогулками и отдыхом.</span>
           </div>
         </div>
       </div>
@@ -1393,14 +1579,22 @@
           веревочный парк, контактный зоопарк и прогулочные зоны.
         </p>
       </div>
-      <div class="note-grid">
+      <div class="note-grid note-grid-wide">
         <article class="note reveal">
           <span class="small-title">Адрес</span>
           <p>Ленинградская область, Всеволожск, Пушкинский переулок, 7.</p>
         </article>
         <article class="note reveal">
-          <span class="small-title">Маршрут</span>
+          <span class="small-title">2ГИС</span>
           <p><a href="https://2gis.ru/vsevolozhsk/firm/70000001022357913" target="_blank" rel="noreferrer">Открыть карточку Рутении в 2ГИС</a>.</p>
+        </article>
+        <article class="note reveal">
+          <span class="small-title">Яндекс.Карты</span>
+          <p><a href="https://yandex.ru/maps/org/detskaya_konnaya_akademiya_ruteniya/42464364309/" target="_blank" rel="noreferrer">Открыть карточку Рутении в Яндекс.Картах</a>.</p>
+        </article>
+        <article class="note reveal">
+          <span class="small-title">Маршрут</span>
+          <p><a href="https://yandex.ru/maps/?mode=routes&rtext=~%D0%92%D1%81%D0%B5%D0%B2%D0%BE%D0%BB%D0%BE%D0%B6%D1%81%D0%BA%2C%20%D0%9F%D1%83%D1%88%D0%BA%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BF%D0%B5%D1%80%D0%B5%D1%83%D0%BB%D0%BE%D0%BA%2C%207&rtt=auto" target="_blank" rel="noreferrer">Построить маршрут в Яндекс.Картах</a>.</p>
         </article>
         <article class="note reveal">
           <span class="small-title">Возраст</span>
@@ -1409,12 +1603,43 @@
       </div>
     </section>
 
+    <section class="gift-section" id="gifts" aria-labelledby="gifts-title">
+      <div class="gift-panel reveal">
+        <div class="gift-copy">
+          <span class="small-title">Подарки</span>
+          <h2 id="gifts-title">Пожеланий совсем немного</h2>
+          <p>
+            Дарья любит узнавать мир: страны, города, природу и маленькие открытия. Можно выбрать что-то из списка
+            или принести подарок на свое усмотрение.
+          </p>
+        </div>
+        <ul class="gift-list" aria-label="Идеи подарков">
+          <li>
+            <strong>Глобус</strong>
+            <span>Для разговоров про страны, моря и путешествия.</span>
+          </li>
+          <li>
+            <strong>Микроскоп</strong>
+            <span>Детский формат для первых наблюдений и опытов.</span>
+          </li>
+          <li>
+            <strong>На свое усмотрение</strong>
+            <span>Любая хорошая идея, которая подойдет пятилетке.</span>
+          </li>
+          <li>
+            <strong>Денежный подарок</strong>
+            <span>Можно просто бумажки с фотографиями российских городов - самый практичный вариант.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
     <section class="rsvp-wrap" id="rsvp" aria-labelledby="rsvp-title">
       <div class="rsvp-panel reveal">
         <div class="rsvp-copy">
           <h2 id="rsvp-title">Ответьте, пожалуйста</h2>
           <p>
-            Так мы заранее поймем количество детей, взрослых, обедов и участие в активностях.
+            Так мы заранее поймем количество детей, взрослых и обедов.
             Ответ уйдет в Telegram.
           </p>
         </div>
@@ -1455,6 +1680,11 @@
               <input type="text" name="childrenAges" placeholder="Например: Миша 5, Саша 3">
             </label>
 
+            <div class="form-note full-row">
+              <strong>Активности уже включены в программу</strong>
+              <span>Все гости идут в веревочный парк по возрасту и на программу с лошадьми. В форме оставили только то, что нужно для списка гостей и обеда.</span>
+            </div>
+
             <fieldset class="full-row">
               <legend>Получится прийти?</legend>
               <div class="option-grid">
@@ -1475,40 +1705,6 @@
               </div>
             </fieldset>
 
-            <fieldset class="full-row">
-              <legend>Веревочный парк</legend>
-              <div class="option-grid">
-                <label class="option">
-                  <input type="radio" name="ropePark" value="Да, дети 5+ участвуют" checked>
-                  <span>
-                    <strong>Да, дети 5+ участвуют</strong>
-                    <small>Родители будут рядом и помогут на маршруте.</small>
-                  </span>
-                </label>
-                <label class="option">
-                  <input type="radio" name="ropePark" value="Младшие будут смотреть">
-                  <span>
-                    <strong>Младшие смотрят</strong>
-                    <small>Будем болеть за старших со стороны.</small>
-                  </span>
-                </label>
-                <label class="option">
-                  <input type="radio" name="ropePark" value="Пока не знаем">
-                  <span>
-                    <strong>Пока не знаем</strong>
-                    <small>Решим ближе к празднику.</small>
-                  </span>
-                </label>
-                <label class="option">
-                  <input type="radio" name="ropePark" value="Не планируем">
-                  <span>
-                    <strong>Не планируем</strong>
-                    <small>Придем на остальную программу.</small>
-                  </span>
-                </label>
-              </div>
-            </fieldset>
-
             <label>
               <span>Детских обедов</span>
               <select name="lunchCount" required>
@@ -1518,15 +1714,6 @@
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5+">5 или больше</option>
-              </select>
-            </label>
-
-            <label>
-              <span>Лошади</span>
-              <select name="horseProgram" required>
-                <option value="Участвуем" selected>Участвуем</option>
-                <option value="Посмотрим на месте">Посмотрим на месте</option>
-                <option value="Не участвуем">Не участвуем</option>
               </select>
             </label>
 
@@ -1594,15 +1781,16 @@
       function buildMessage(formData) {
         const parts = [
           "RSVP: день рождения Дарьи Маник, 8 августа 2026",
+          "Сбор: 11:30, Рутения",
           "",
           "Ответ: " + getRadioValue(formData, "attendance"),
           "Кто отвечает: " + (formData.get("guestName") || "Не указано"),
           "Детей: " + (formData.get("childrenCount") || "0"),
           "Взрослых: " + (formData.get("adultsCount") || "0"),
           "Имена и возраст детей: " + (formData.get("childrenAges") || "Не указано"),
-          "Веревочный парк: " + getRadioValue(formData, "ropePark"),
+          "Веревочный парк: все гости по возрасту участвуют или смотрят и болеют",
           "Детских обедов: " + (formData.get("lunchCount") || "0"),
-          "Лошади: " + (formData.get("horseProgram") || "Не указано"),
+          "Лошади: все идут на программу с лошадьми",
           "Комментарий: " + (formData.get("comment") || "Нет"),
           "",
           "Отправлено: " + new Intl.DateTimeFormat("ru-RU", {
