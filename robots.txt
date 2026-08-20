@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /darya/
+Disallow: /darya.html
+
+Sitemap: https://ilyamanik.ru/sitemap.xml
