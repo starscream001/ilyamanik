@@ -165,15 +165,9 @@ h3 {
 .brand-mark {
   width: 2rem;
   height: 2rem;
-  display: grid;
-  place-items: center;
-  border-radius: 0.6rem;
-  background: var(--accent);
-  color: #fff;
-  font-family: var(--font-mono);
-  font-size: 0.66rem;
-  font-weight: 500;
-  letter-spacing: -0.03em;
+  flex: 0 0 auto;
+  border-radius: 0.58rem;
+  background: url("./favicon.svg") center / cover no-repeat;
 }
 
 .primary-nav {

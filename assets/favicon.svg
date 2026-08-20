@@ -1,6 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="ИМ">
-  <rect width="64" height="64" rx="10" fill="#0d0c0d"/>
-  <rect x="8" y="8" width="48" height="48" rx="8" fill="#171214" stroke="#d3323d" stroke-width="3"/>
-  <rect x="14" y="14" width="36" height="8" rx="2" fill="#d3323d"/>
-  <text x="32" y="43" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#f4efef">ИМ</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Орбита — знак Ильи Маника">
+  <defs>
+    <linearGradient id="orbit-trail" x1="48.5" y1="21.5" x2="13" y2="32" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ef233c"/>
+      <stop offset="0.28" stop-color="#e7263a"/>
+      <stop offset="0.67" stop-color="#742027"/>
+      <stop offset="1" stop-color="#171719"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="18" fill="#f1f1f3"/>
+  <path d="M48.5 21.5A19 19 0 0 0 13 32" fill="none" stroke="url(#orbit-trail)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M13 32A19 19 0 0 0 45.5 45" fill="none" stroke="#171719" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="48.5" cy="21.5" r="5" fill="#ef233c"/>
 </svg>
