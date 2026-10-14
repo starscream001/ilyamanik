@@ -133,3 +133,9 @@ if (categoryPicker && matchMedia('(max-width: 760px)').matches) {
 document.querySelectorAll('.masthead nav a').forEach(link => {
   if (link.pathname === location.pathname) link.setAttribute('aria-current', 'page');
 });
+
+if (categoryPicker) {
+  matchMedia('(max-width: 760px)').addEventListener('change', event => {
+    categoryPicker.open = !event.matches;
+  });
+}
