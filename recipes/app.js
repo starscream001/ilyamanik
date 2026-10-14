@@ -118,3 +118,18 @@ if (recipeId) {
     catch { showToast('Скопируйте адрес рецепта из адресной строки браузера.'); }
   });
 }
+
+// Keep the catalog compact on phones; every category remains in a native disclosure.
+const categoryPicker = document.querySelector('.category-picker');
+if (categoryPicker && matchMedia('(max-width: 760px)').matches) {
+  categoryPicker.open = false;
+  categoryPicker.querySelectorAll('[data-category-filter]').forEach(button => {
+    button.addEventListener('click', () => {
+      categoryPicker.open = false;
+      categoryPicker.querySelector('summary').textContent = activeCategory === 'Все рецепты' ? 'Разделы книги' : activeCategory;
+    });
+  });
+}
+document.querySelectorAll('.masthead nav a').forEach(link => {
+  if (link.pathname === location.pathname) link.setAttribute('aria-current', 'page');
+});
