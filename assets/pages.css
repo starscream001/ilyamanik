@@ -101,6 +101,22 @@
   min-width: 0;
 }
 
+.direction-rows--services {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.direction-rows--services article {
+  grid-column: span 2;
+}
+
+.direction-rows--services article:nth-child(-n + 2) {
+  grid-column: span 3;
+}
+
+.direction-rows--services a {
+  height: 100%;
+}
+
 .direction-rows a {
   min-height: 12rem;
   display: grid;
@@ -626,6 +642,11 @@
 
   .direction-rows {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .direction-rows--services article,
+  .direction-rows--services article:nth-child(-n + 2) {
+    grid-column: auto;
   }
 
   .placeholder-shell {
