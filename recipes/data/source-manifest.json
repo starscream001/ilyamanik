@@ -1,0 +1,26 @@
+[
+  {
+    "file": "originals/scan-1.pdf",
+    "originalName": "Отсканированный документ.pdf",
+    "pages": 24,
+    "sha256": "8c5831d170660ea9124857d470734d36554b0941cd872cab95276c30316bda05"
+  },
+  {
+    "file": "originals/scan-2.pdf",
+    "originalName": "Отсканированный документ 2.pdf",
+    "pages": 24,
+    "sha256": "b2046f4e0c551e69c547a1d567f44d5e08de6ea561d6997e970c74954291cb0a"
+  },
+  {
+    "file": "originals/scan-3.pdf",
+    "originalName": "Отсканированный документ 3.pdf",
+    "pages": 24,
+    "sha256": "9cc0c01ef873ed0a519818c0eb9d9fda868a1a9fbff6871a45480d70c6d6725d"
+  },
+  {
+    "file": "originals/scan-4.pdf",
+    "originalName": "Отсканированный документ 4.pdf",
+    "pages": 22,
+    "sha256": "a5aafb4e05c01286ba506bc21f7bc4ed3c4f7c54558e00c8faaa137e0c6e1f3a"
+  }
+]
